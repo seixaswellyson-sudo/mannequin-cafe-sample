@@ -46,19 +46,8 @@
       crossorigin
     />
     <link rel="stylesheet" href="./assets/fonts/fonts.css" />
-    <script type="module" crossorigin src="./static/index-BShz_Dxt.js"></script>
+    <script type="module" crossorigin src="./static/3-index-BShz_Dxt.js"></script>
     <link rel="stylesheet" crossorigin href="./static/index-CjeqylPV.css">
-    <script>
-      // Route mobile frame requests to the coffee-specific replacement pack.
-      (() => {
-        const fetchOriginal = window.fetch.bind(window);
-        const routes = {
-          './assets/frames-m/3-pack.bin': './assets/frames-m/1-3-pack.bin',
-          './assets/frames-m/4-manifest.json': './assets/frames-m/2-4-manifest.json'
-        };
-        window.fetch = (input, options) => fetchOriginal(routes[input] || input, options);
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>
